@@ -1,0 +1,33 @@
+\documentclass[12pt]{article} % use larger type; default would be 10pt
+
+\usepackage[allowdeprecated=false,autocompile]{gregoriotex}
+\usepackage{fontspec}
+\setmainfont[
+    Path = ../../../fonts/ ,
+    Extension = .otf ,
+    UprightFont = *-Regular ,
+    UprightFeatures = { SmallCapsFont = *SC-Regular } ,
+    BoldFont = *-Bold ,
+    BoldFeatures = { SmallCapsFont = *SC-Bold } ,
+    ItalicFont = *-Italic ,
+    ItalicFeatures = { SmallCapsFont = *SC-Italic } ,
+    BoldItalicFont = *-BoldItalic ,
+    BoldItalicFeatures = { SmallCapsFont = *SC-BoldItalic } ,
+    Ligatures = TeX
+]{Alegreya}
+\listfiles
+
+% This test is highly sensitive to the line width and the history of its manipulation.
+% If necessary tweak the line width so that `Domino` splits as `Do-` and `mino` 
+% but always delete all aux files before checking to see that the split is right.
+\textwidth=80mm
+
+\grecreatedim{spacebeneathtext}{2mm}{scalable}%
+
+\begin{document}
+\gregorioscore{incipit3.gabc}
+
+\vspace{1cm}
+\gregorioscore{incipit3-notranslation.gabc}
+
+\end{document}
